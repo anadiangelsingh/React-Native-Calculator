@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 10,
     paddingRight: 10,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#463f3f',
   },
   backgroundImage: {
     opacity: 0.7,
