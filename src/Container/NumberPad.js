@@ -10,6 +10,33 @@ function NumberPad() {
       case '1':
         setEnteredNumber(pressValue);
         break;
+      case '2':
+        setEnteredNumber(pressValue);
+        break;
+      case '3':
+        setEnteredNumber(pressValue);
+        break;
+      case '4':
+        setEnteredNumber(pressValue);
+        break;
+      case '5':
+        setEnteredNumber(pressValue);
+        break;
+      case '6':
+        setEnteredNumber(pressValue);
+        break;
+      case '7':
+        setEnteredNumber(pressValue);
+        break;
+      case '8':
+        setEnteredNumber(pressValue);
+        break;
+      case '9':
+        setEnteredNumber(pressValue);
+        break;
+      case '0':
+        setEnteredNumber(pressValue);
+        break;
       case '%':
         setEnteredNumber(pressValue);
     }
@@ -21,6 +48,7 @@ function NumberPad() {
     <View>
       <View>
         <TextInput
+          style={styles.textInputStyle}
           label="Item Name"
           //keyboardType="email-address"
           onChange={enteredNumber}
@@ -29,40 +57,77 @@ function NumberPad() {
           placeholderTextColor="#020101"
         />
       </View>
-      <View></View>
-      <View style={styles.buttonStyle}>
-        <Button onPress={numberHandler.bind(this, '1')}>{'C'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'+/-'} </Button>
-        <Button onPress={numberHandler.bind(this, 'operator', '%')}>
-          {'%'}{' '}
-        </Button>
-        <Button onPress={() => this.HandleTap('operator', '/')}>{'/'} </Button>
-      </View>
-      <View style={styles.buttonStyle}>
-        <Button onPress={numberHandler.bind(this, 'number', '1')}>
-          {'1'}{' '}
-        </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'2'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'3'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'X'} </Button>
-      </View>
-      <View style={styles.buttonStyle}>
-        <Button onPress={numberHandler.bind(this, '1')}>{'4'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'5'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'6'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'-'} </Button>
-      </View>
-      <View style={styles.buttonStyle}>
-        <Button onPress={numberHandler.bind(this, '1')}>{'7'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'8'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'9'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'+'} </Button>
-      </View>
-      <View style={styles.buttonStyle}>
-        <Button onPress={numberHandler.bind(this, '1')}>{'0'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'.'} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'='} </Button>
-        <Button onPress={numberHandler.bind(this, '1')}>{'DEL'} </Button>
+      <View>
+        <View style={styles.buttonStyle}>
+          <Button onPress={numberHandler.bind(this, 'number', '0')}>
+            {'C'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+            {'+/-'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'operator', '%')}>
+            {'%'}{' '}
+          </Button>
+          <Button onPress={() => this.HandleTap('operator', '/')}>
+            {'/'}{' '}
+          </Button>
+        </View>
+        <View style={styles.buttonStyle}>
+          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+            {'1'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '2')}>
+            {'2'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '3')}>
+            {'3'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '')}>
+            {'X'}{' '}
+          </Button>
+        </View>
+        <View style={styles.buttonStyle}>
+          <Button onPress={numberHandler.bind(this, 'number', '4')}>
+            {'4'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '5')}>
+            {'5'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '6')}>
+            {'6'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '')}>
+            {'-'}{' '}
+          </Button>
+        </View>
+        <View style={styles.buttonStyle}>
+          <Button onPress={numberHandler.bind(this, 'number', '7')}>
+            {'7'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '8')}>
+            {'8'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '9')}>
+            {'9'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+            {'+'}{' '}
+          </Button>
+        </View>
+        <View style={styles.buttonStyle}>
+          <Button onPress={numberHandler.bind(this, 'number', '0')}>
+            {'0'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+            {'.'}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+            {'='}{' '}
+          </Button>
+          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+            {'DEL'}{' '}
+          </Button>
+        </View>
       </View>
     </View>
   );
@@ -77,5 +142,18 @@ const styles = StyleSheet.create({
   },
   abc: {
     z: '#adcb25ff',
+  },
+  textInputStyle: {
+    flex: 1,
+    flexDirection: 'row',
+    padding: 30,
+    borderWidth: 0,
+    marginTop: 250,
+    marginLeft: 0,
+    marginRight: 0,
+    margin: 0,
+    textAlign: 'right',
+    fontSize: 24,
+    fontWeight: 'bold',
   },
 });

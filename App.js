@@ -4,10 +4,7 @@ import NumberPad from './src/Container/NumberPad';
 export default function App() {
   return (
     <View style={styles.rootScreen}>
-      <View style={styles.textBox}>
-        <Text>'RN_ Calculator'</Text>
-      </View>
-      <View style={styles.textBox1}>
+      <View>
         <NumberPad />
       </View>
     </View>
@@ -18,7 +15,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingLeft: 10,
     paddingRight: 10,
-    backgroundColor: '#897070',
+    backgroundColor: '#8d8585',
   },
   backgroundImage: {
     opacity: 0.7,
