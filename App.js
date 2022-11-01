@@ -1,13 +1,14 @@
 import {View, Text, StyleSheet} from 'react-native';
 import NumberPad from './src/Container/NumberPad';
+import LinearGradient from 'react-native-linear-gradient';
 
 export default function App() {
   return (
-    <View style={styles.rootScreen}>
+    <LinearGradient colors={['#fcf6cf', '#ff886a']} style={styles.rootScreen}>
       <View>
         <NumberPad />
       </View>
-    </View>
+    </LinearGradient>
   );
 }
 const styles = StyleSheet.create({

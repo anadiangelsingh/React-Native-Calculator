@@ -1,6 +1,6 @@
 import {Pressable, StyleSheet, Text, View} from 'react-native';
 
-function Button({children, onPress}) {
+function OperatorButton({children, onPress}) {
   return (
     <Pressable
       style={({pressed}) => [styles.button, pressed && styles.pressed]}
@@ -12,7 +12,7 @@ function Button({children, onPress}) {
   );
 }
 
-export default Button;
+export default OperatorButton;
 
 const styles = StyleSheet.create({
   button: {
@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     height: 85,
     width: 85,
-    backgroundColor: '#e18f07',
+    backgroundColor: '#99580b',
     elevation: 2,
     shadowColor: 'black',
     shadowOffset: {width: 1, height: 1},

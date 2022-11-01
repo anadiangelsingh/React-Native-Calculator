@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {View, StyleSheet, TextInput} from 'react-native';
 import Button from '../ui/Buttons/Button';
+import OperatorButton from '../ui/Buttons/OperatorButton';
 import {initialState} from '../util/Calculator';
 
 function NumberPad() {
@@ -59,18 +60,18 @@ function NumberPad() {
       </View>
       <View>
         <View style={styles.buttonStyle}>
-          <Button onPress={numberHandler.bind(this, 'number', '0')}>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '0')}>
             {'C'}{' '}
-          </Button>
-          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+          </OperatorButton>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '1')}>
             {'+/-'}{' '}
-          </Button>
-          <Button onPress={numberHandler.bind(this, 'operator', '%')}>
+          </OperatorButton>
+          <OperatorButton onPress={numberHandler.bind(this, 'operator', '%')}>
             {'%'}{' '}
-          </Button>
-          <Button onPress={() => this.HandleTap('operator', '/')}>
+          </OperatorButton>
+          <OperatorButton onPress={() => this.HandleTap('operator', '/')}>
             {'/'}{' '}
-          </Button>
+          </OperatorButton>
         </View>
         <View style={styles.buttonStyle}>
           <Button onPress={numberHandler.bind(this, 'number', '1')}>
@@ -82,9 +83,9 @@ function NumberPad() {
           <Button onPress={numberHandler.bind(this, 'number', '3')}>
             {'3'}{' '}
           </Button>
-          <Button onPress={numberHandler.bind(this, 'number', '')}>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '')}>
             {'X'}{' '}
-          </Button>
+          </OperatorButton>
         </View>
         <View style={styles.buttonStyle}>
           <Button onPress={numberHandler.bind(this, 'number', '4')}>
@@ -96,9 +97,9 @@ function NumberPad() {
           <Button onPress={numberHandler.bind(this, 'number', '6')}>
             {'6'}{' '}
           </Button>
-          <Button onPress={numberHandler.bind(this, 'number', '')}>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '')}>
             {'-'}{' '}
-          </Button>
+          </OperatorButton>
         </View>
         <View style={styles.buttonStyle}>
           <Button onPress={numberHandler.bind(this, 'number', '7')}>
@@ -110,9 +111,9 @@ function NumberPad() {
           <Button onPress={numberHandler.bind(this, 'number', '9')}>
             {'9'}{' '}
           </Button>
-          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '1')}>
             {'+'}{' '}
-          </Button>
+          </OperatorButton>
         </View>
         <View style={styles.buttonStyle}>
           <Button onPress={numberHandler.bind(this, 'number', '0')}>
@@ -121,12 +122,12 @@ function NumberPad() {
           <Button onPress={numberHandler.bind(this, 'number', '1')}>
             {'.'}{' '}
           </Button>
-          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '1')}>
             {'='}{' '}
-          </Button>
-          <Button onPress={numberHandler.bind(this, 'number', '1')}>
+          </OperatorButton>
+          <OperatorButton onPress={numberHandler.bind(this, 'number', '1')}>
             {'DEL'}{' '}
-          </Button>
+          </OperatorButton>
         </View>
       </View>
     </View>
@@ -153,7 +154,7 @@ const styles = StyleSheet.create({
     marginRight: 0,
     margin: 0,
     textAlign: 'right',
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold',
   },
 });
