@@ -55,7 +55,7 @@ function NumberPad() {
           onChange={enteredNumber}
           //isInvalid={emailIsInvalid}
           placeholder={enteredNumber}
-          placeholderTextColor="#7d3a3a"
+          placeholderTextColor="#3a0606"
         />
       </View>
       <View>
